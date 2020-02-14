@@ -63,6 +63,7 @@ public class Slingshot : MonoBehaviour{
             projectilRigidbody.isKinematic = false;
             projectilRigidbody.velocity = -mouseDelta * velocityMult;
             projectile = null;
+            GameMgmt.ShotFired();
         }
     }
 }
