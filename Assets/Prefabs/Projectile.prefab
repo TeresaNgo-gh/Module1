@@ -122,4 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f57cb34b2b4de44588cfe9c581e97bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreGT: {fileID: 0}
+  collided: 0
