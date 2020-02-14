@@ -39,7 +39,7 @@ public class GameMgmt : MonoBehaviour{
         collectible.transform.position = collectiblesPos;
         shotsTaken = 0;
 
-        CollectPickups.goalMet = false;
+        Counter.goalMet = false;
         UpdateGUI();
     }
 
@@ -51,7 +51,7 @@ public class GameMgmt : MonoBehaviour{
     void Update(){
         UpdateGUI();
 
-        if(CollectPickups.goalMet){
+        if(Counter.goalMet){
             Invoke("NextLevel", 2f);
         }
     }

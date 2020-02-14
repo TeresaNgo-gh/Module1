@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Counter : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class Counter : MonoBehaviour{
+    public int numOfPickups;
+    static public bool goalMet = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        numOfPickups = GameObject.FindGameObjectsWithTag("Pickup").Length;
+        if (numOfPickups ==0){
+            Counter.goalMet = true;
+        }
     }
 }
