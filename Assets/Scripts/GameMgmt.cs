@@ -43,6 +43,10 @@ public class GameMgmt : MonoBehaviour{
 
     void Update(){
         UpdateGUI();
+
+        if(collided = 7){
+            Invoke("NextLevel", 2f);
+        }
     }
 
     void NextLevel(){
