@@ -9,7 +9,7 @@ public class CollectPickups : MonoBehaviour{
 
     void OnCollisionEnter(Collision coll){
         GameObject collidedWith = coll.gameObject;
-        if(collidedWith.tag =="Pickup"){
+        if(collidedWith.tag == "Pickup"){
             Destroy(collidedWith);
             int score = int.Parse(scoreGT.text);
             score += 1;
