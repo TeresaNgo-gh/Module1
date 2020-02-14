@@ -14,7 +14,7 @@ public class CollectPickups : MonoBehaviour{
             Destroy(collidedWith);
             collided++;
             if(collided == 7){
-                goalMet = true;
+                CollectPickups.goalMet = true;
             }
         }
     }
