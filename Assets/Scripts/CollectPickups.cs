@@ -11,9 +11,6 @@ public class CollectPickups : MonoBehaviour{
         GameObject collidedWith = coll.gameObject;
         if(collidedWith.tag == "Pickup"){
             Destroy(collidedWith);
-            int score = int.Parse(scoreGT.text);
-            score += 1;
-            scoreGT.text = score.ToString();
         }
     }
 }
