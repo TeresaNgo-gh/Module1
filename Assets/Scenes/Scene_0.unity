@@ -665,6 +665,7 @@ GameObject:
   - component: {fileID: 742506174}
   - component: {fileID: 742506173}
   - component: {fileID: 742506176}
+  - component: {fileID: 742506177}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -761,6 +762,19 @@ MonoBehaviour:
   levelMax: 0
   shotsTaken: 0
   collectible: {fileID: 0}
+--- !u!114 &742506177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742506172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f03ffe24f3b5d4f8f66e7177c7aa54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfPickups: 0
 --- !u!1 &862029301
 GameObject:
   m_ObjectHideFlags: 0
