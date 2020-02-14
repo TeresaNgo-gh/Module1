@@ -26,6 +26,10 @@ public class GameMgmt : MonoBehaviour{
     }
 
     void StartLevel(){
+        if (collectible != null){
+            Destroy(collectible);
+        }
+
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Projectile");
         foreach(GameObject pTemp in gos){
             Destroy(pTemp);
@@ -34,6 +38,9 @@ public class GameMgmt : MonoBehaviour{
         collectible = Instantiate<GameObject>(collectibles[level]);
         collectible.transform.position = collectiblesPos;
         shotsTaken = 0;
+
+        CollectPickups.goalMet = false;
+        UpdateGUI();
     }
 
     void UpdateGUI(){
@@ -44,7 +51,7 @@ public class GameMgmt : MonoBehaviour{
     void Update(){
         UpdateGUI();
 
-        if(collided = 7){
+        if(CollectPickups.goalMet){
             Invoke("NextLevel", 2f);
         }
     }
