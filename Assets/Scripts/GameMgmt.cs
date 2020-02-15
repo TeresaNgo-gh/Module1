@@ -15,6 +15,7 @@ public class GameMgmt : MonoBehaviour{
     [Header("Set in Inspector")]
     public Text uitLevel;
     public Text uitShots;
+    public Text uitWinText;
     public Vector3 collectiblesPos;
     public GameObject[] collectibles;
 
@@ -30,6 +31,7 @@ public class GameMgmt : MonoBehaviour{
         level = 0;
         levelMax = collectibles.Length;
         StartLevel();
+        uitWinText.text = "";
     }
 
     void StartLevel(){
@@ -68,7 +70,7 @@ public class GameMgmt : MonoBehaviour{
     void NextLevel(){
         level++;
         if(level == levelMax){
-            level=0;
+            uitWinText.text = "You Win!";
         }
         StartLevel();
     }
