@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum GameMode{
+    idle,
+    playing,
+    levelEnd
+}
+
 public class GameMgmt : MonoBehaviour{
     static private GameMgmt S;
 
@@ -17,6 +23,7 @@ public class GameMgmt : MonoBehaviour{
     public int levelMax;
     public int shotsTaken;
     public GameObject collectible;
+    public GameMode mode = GameMode.idle;
 
     void Start(){
         S = this;
@@ -41,6 +48,7 @@ public class GameMgmt : MonoBehaviour{
 
         Counter.goalMet = false;
         UpdateGUI();
+        mode = GameMode.playing;
     }
 
     void UpdateGUI(){
@@ -51,7 +59,8 @@ public class GameMgmt : MonoBehaviour{
     void Update(){
         UpdateGUI();
 
-        if(Counter.goalMet){
+        if((mode == GameMode.playing) && Counter.goalMet){
+            mode = GameMode.levelEnd;
             Invoke("NextLevel", 2f);
         }
     }
