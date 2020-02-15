@@ -71,6 +71,7 @@ public class GameMgmt : MonoBehaviour{
         level++;
         if(level == levelMax){
             uitWinText.text = "You Win!";
+            uitLevel.text = "End Game";
         }
         StartLevel();
     }
