@@ -54,7 +54,11 @@ public class GameMgmt : MonoBehaviour{
     }
 
     void UpdateGUI(){
-        uitLevel.text = "Level: "+(level+1)+" of "+levelMax;
+        if(level == levelMax){
+            uitLevel.text = "End Game";
+        } else{
+            uitLevel.text = "Level: "+(level+1)+" of "+levelMax;
+        }
         uitShots.text = "Shots Taken: "+shotsTaken;
     }
 
@@ -71,7 +75,6 @@ public class GameMgmt : MonoBehaviour{
         level++;
         if(level == levelMax){
             uitWinText.text = "You Win!";
-            uitLevel.text = "End Game";
         }
         StartLevel();
     }
