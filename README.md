@@ -1,2 +1,3 @@
 # Module1
  
+The goal of this game is to destroy each pickup in the air. The user will instantiate a projectile using the slingshot and, like in Mission Demolition, will launch the projectile to collect items. However, instead of knocking down a castle or reaching a goal, the user will destroy each and every pickup to get to the next stage. This is similar to Roll-a-Ball. There are four levels to this game, and each level getting slightly harder. Once all the levels have been completed, the game displays "You Win!" My goal in creating this project was to combine a few different features from the games we've created this semester. I wanted to make something new, but also similar to what we've done by using previous game elements and features. 
